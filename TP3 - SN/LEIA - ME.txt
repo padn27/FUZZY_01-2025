@@ -1,0 +1,96 @@
+================================================================================
+README - TRABALHO FINAL
+CONTROLE E ESTIMAÇÃO DE BICICLETA AUTOEQUILIBRÁVEL VIA MODELOS TAKAGI-SUGENO
+Autor(a): Priscila Dias
+================================================================================
+
+DESCRIÇÃO GERAL
+Este .zip apresenta o controle e a estimação de estados de uma bicicleta autoequilibrável modelada por sistemas Takagi-Sugeno (TS). 
+O trabalho abrange o desenvolvimento do modelo TS exato via abordagem da não linearidade setorial, projeto de controladores por realimentação completa e do tipo PDC com taxa de decaimento, além do desenvolvimento e simulação de observadores com diferentes conjuntos de medições dos estados.
+
+Ferramentas utilizadas:
+- MATLAB
+- YALMIP (para formulação de LMIs)
+- SeDuMi (solver)
+- Simulações numéricas via ODE45 e métodos explícitos
+
+====================================================================
+EXECUÇÃO PASSO A PASSO DOS SCRIPTS - HÁ SCRIPT PRINCIPAL DE EXECUÇÃO
+====================================================================
+
+Além dos scripts individuais listados abaixo, este trabalho inclui um script principal chamado **bicicleta.m** que automatiza a execução sequencial de todas as questões (Q1 a Q8) e arquivos complementar (Q6_TScomganhos.m).
+
+Características do script bicicleta.m:
+
+- Executa na ordem correta todos os scripts do trabalho.
+- Exibe mensagens no console indicando qual questão está sendo processada.
+- Realiza pausa após cada script para permitir visualização dos gráficos e resultados.
+- Captura e informa erros de execução sem interromper a sequência.
+- Facilita a reprodução completa dos experimentos e simulações de forma automatizada.
+
+Para rodar todos os passos automaticamente, basta executar no MATLAB:
+
+>> bicicleta.m
+
+Esse script garante a execução organizada e sequencial de todo o trabalho, facilitando análises, comparações e a geração de resultados finais.
+
+[1] Modelo TS Exato via Não Linearidade Setorial  
+→ Script: Q1.m  
+Descrição: Construção das matrizes Ai e Bi para as 8 regras do modelo TS exato, com base na abordagem de não linearidade setorial.
+
+[2] Controlador por Realimentação Completa u = Kx  
+→ Script: Q2.m  
+Descrição: Projeto do controlador TS por realimentação completa com ganhos fixos por regra, usando formulação LMI padrão.
+
+[3] Controlador TS-PDC com Taxa de Decaimento  
+→ Script: Q3.m  
+Descrição: Projeto do controlador TS do tipo PDC com taxa de decaimento α > 0 via LMIs, reforçando a estabilidade do sistema.
+
+[4] Simulação do Sistema com Controlador e Rastreamento de Referência Senoidal em x3  
+→ Script: Q4.m  
+Descrição: Simulação do controlador PDC para rastreamento de referência senoidal na variável x3 (ângulo), avaliando desempenho e erro.
+
+[5] Rastreamento Senoidal em x3 e x4  
+→ Script: Q5.m  
+Descrição: Teste do sistema para rastreamento de referências senoidais em x3 e x4 simultaneamente, identificando limites para amplitude K e frequência ω.
+
+[6] Observador TS com Premissas Conhecidas (medição completa)  
+→ Script: Q6.m  
+Descrição: Projeto do observador de estados via LMIs considerando acesso completo às variáveis de saída (C = [1 0 0 0]).
+
+[7] Simulação do Observador com Premissas Conhecidas  
+→ Script: Q6_TScomganhos.m  
+Descrição: Simulação do sistema com o observador projetado no passo [8], utilizando ganhos Li fixos.
+
+[8] Observador com Medições Parciais (x1 e x3)  
+→ Script: Q7.m  
+Descrição: Projeto do observador considerando medições parciais dos estados (C = [1 0 0 0; 0 0 1 0]) via LMIs.
+
+[9] Comparação e Avaliação dos Observadores   
+→ Script: Q8.m  
+Descrição: Simulação comparativa entre os dois observadores, com análise quantitativa do erro de estimação e desempenho.
+
+=====================================================================================================
+SAÍDAS GERADAS:
+- Gráficos dos estados reais e estimados
+- Erros de estimação para diferentes observadores
+- Animação gráfica da evolução dos estados estimados
+- Relatório de desempenho e estabilidade
+
+===================================================================================================================
+
+No MATLAB, execute os scripts na ordem sugerida para melhor entendimento e resultados: Os scripts são independentes, porém seguem a lógica de construção do modelo, controlador e observadores.
+
+===================================================================================================================
+OBSERVAÇÕES IMPORTANTES:
+- As ferramentas YALMIP e SeDuMi devem estar instaladas e corretamente configuradas no MATLAB.
+- Recomenda-se conferir as dimensões das matrizes e parâmetros para evitar erros de otimização.
+- A precisão numérica das LMIs pode ser ajustada pelo parâmetro epsilon para garantir convergência.
+- Para o observador parcial, as medições consideram apenas os estados x1 e x3, em contraste com o observador completo.
+- A documentação nos scripts oferece detalhes de implementação e fórmulas usadas.
+
+==========================================================================================================================
+CONTATO  
+Dúvidas, sugestões ou contribuições podem ser enviadas para: Priscila Dias – prisciladiasnicacio@ufmg.br
+
+==========================================================================================================================

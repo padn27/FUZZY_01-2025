@@ -1,0 +1,37 @@
+TRABALHO FINAL - SEMINÁRIO FUZZY
+ALUNA: PRISCILA APARECIDA DIAS NICÁCIO
+
+
+================================================================================
+Link da apresentação no YouTube: [https://www.youtube.com/watch?v=BT_uqd8xEkg] 
+================================================================================
+
+
+Este repositório contém os arquivos referentes ao Trabalho Final da disciplina de Sistemas Fuzzy com foco na aplicação do controle fuzzy em sistemas semafóricos.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Conteúdo do Repositório
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+A apresentação que sintetiza os principais pontos do projeto está disponível no formato .pdf e foi gravada em vídeo.
+Arquivo: fuzzy - TPFinal.pdf
+
+
+Relatório técnico: Relatório_fuzzy.pdf
+Documento completo com todas as decisões técnicas do projeto, incluindo:
+
+- Definição das variáveis linguísticas
+
+- Conjuntos fuzzy utilizados
+
+- Regras de inferência
+
+- Justificativas
+
+- Análise dos resultados
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+O trabalho foi desenvolvido com base no artigo de referência: PAPER_AdaptativeFuzzy.pdf
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Vídeos demonstrativos não foram enviados devido à capacidade restritiva do sistema Moodle (Simulação.mp4: vídeo da simulação do sistema fuzzy em funcionamento e Adaptativo_vs_fixo.mp4: vídeo explicativo comparando o sistema semafórico adaptativo - baseado em controle fuzzy - com o sistema convencional fixo, destacando as vantagens da adaptação inteligente ao fluxo de tráfego), porém aparecem no vídeo gravado e publicado no YouTube.
